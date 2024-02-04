@@ -1,9 +1,11 @@
 FROM node:20
 
-WORKDIR /usr/app 
-COPY ./ /usr/app
+WORKDIR /usr/src/app 
 
-RUN sudo npm install 
+COPY package.json ./
+
+RUN npm install 
+
+COPY . .
 
 CMD ["npm", "run", "deploy"]
-EXPOSE 4000
