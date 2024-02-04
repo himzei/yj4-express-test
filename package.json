@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon --exec babel-node src/index.js",
     "build": "babel src -d build",
-    "start": "node build/index.js"
+    "start": "node build/index.js",
+    "deploy": "npm run build && npm start"
   },
   "author": "",
   "license": "ISC",
